@@ -36,7 +36,7 @@ Arabic, English, Urdu, Bengali, Turkish, French, Malay, Persian, Russian, Swahil
 ## 💻 Download the Desktop App
 
 ### 🐧 Linux
-- [Download AppImage](./appimage/Al-Quran-Multilingual-x86_64.AppImage)
+- [Download AppImage](./linux/Al-Quran-Multilingual-x86_64.AppImage)
 
 ### 🪟 Windows
 - [Download Installer](./windows/Al-Quran-Multilingual-Setup.exe)

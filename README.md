@@ -114,6 +114,6 @@ Download the **Al Quran Multilingual App** — the most powerful, lightweight, a
 
 ### 🔍 Keywords (SEO Boosters)
 
-`al quran`, `quran`, `quran app`, `quran download`, `quran desktop app`, `multilingual quran`, `mobile quran app`, `free quran app`, `open source quran reader`, `quran with translation`, `offline quran app`, `quran in english`, `quran in urdu`, `quran pc download`
+`al quran`, `quran`, `quran app`, `quran download`, `quran desktop app`, `multilingual quran`, `mobile quran app`, `free quran app`, `open source quran reader`, `quran with translation`, `offline quran app`, `quran in english`, `quran in urdu`, `quran pc download`, `al quran multilingual`, `al quran multilingual pro`
 
 ---

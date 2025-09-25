@@ -1,10 +1,34 @@
 # 🕋 Al Quran Multilingual – Free Quran App for Desktop & Mobile
 
+
+[![Buy Me a Coffee](https://img.shields.io/badge/☕-Buy%20Me%20a%20Coffee-orange?style=for-the-badge)](https://buymeacoffee.com/jinosh)
+
+
 **📖 Download the Quran in multiple languages — Free, Ad-Free, and Open Source.**
 Available for **Linux**, **Windows**, **macOS**, **Android**, and **iOS**.
 
 > 🌐 Visit our official website: [alquranjino.online](https://alquranjino.online)
 > 📥 Try it now on [Android](https://play.google.com/store/apps/details?id=jino.quran.app) and [iOS/macOS](https://apps.apple.com/app/al-quran-multilingual/id6479079430)
+
+---
+
+
+## 💝 Support & Donations
+
+Al Quran Multilingual is **completely free, ad-free, and open source**.  
+If you find this project useful and would like to support its development, you can help by donating:
+
+* ☕ **Buy Me a Coffee**: [buymeacoffee.com/jinosh](https://buymeacoffee.com/jinosh)  
+* 📲 **UPI**: `8870358783@ybl`  
+* 💳 **Direct Mobile Payments (India):**  
+  * Google Pay: `+91 8870358783`  
+  * PhonePe: `+91 8870358783`  
+  * Amazon Pay: `+91 8870358783`  
+  * Paytm: `+91 8870358783`  
+  * CRED: `+91 8870358783`  
+
+Your donations will help keep this project free for everyone around the world.  
+**May Allah reward you abundantly for your generosity. 🤲**  
 
 ---
 

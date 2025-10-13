@@ -8,7 +8,7 @@
 Available for **Linux**, **Windows**, **macOS**, **Android**, and **iOS**.
 
 > 🌐 Visit our official website: [alquranjino.online](https://alquranjino.online)
-> 📥 Try it now on [Android](https://play.google.com/store/apps/details?id=jino.quran.app) and [iOS/macOS](https://apps.apple.com/app/al-quran-multilingual/id6479079430)
+> 📥 Try it now on [Android](https://play.google.com/store/apps/details?id=jino.quran.app) and [iOS/macOS](https://apps.apple.com/app/al-quran-multilingual/id6738510896)
 
 ---
 
@@ -82,14 +82,14 @@ chmod +x Al-Quran-Multilingual-x86_64.AppImage
 
 ### 🍏 **Download Quran App for macOS**
 
-* [Mac App Store](https://apps.apple.com/app/al-quran-multilingual/id6479079430)
+* [Mac App Store](https://apps.apple.com/app/al-quran-multilingual/id6738510896)
 
 ---
 
 ## 📱 Quran App for Mobile Devices
 
 * 📲 **Quran App for Android**: [Download from Google Play Store](https://play.google.com/store/apps/details?id=jino.quran.app)
-* 📱 **Quran App for iOS & macOS**: [Download from Apple App Store](https://apps.apple.com/app/al-quran-multilingual/id6479079430)
+* 📱 **Quran App for iOS & macOS**: [Download from Apple App Store](https://apps.apple.com/app/al-quran-multilingual/id6738510896)
 
 ---
 

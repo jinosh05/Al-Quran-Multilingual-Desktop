@@ -53,7 +53,8 @@ With support for **470+ translations** in over **100 languages**, it’s your co
 ## 🔑 Key Features of Al Quran Multilingual
 
 * 🌐 **Multilingual Quran App** – Translations in 100+ languages
-* 📚 **470+ Quranic Editions** – Including translations and tafsir
+* 📚 **470+ Quranic Editions** – Including translations and tafsir.
+* 📚 **Download PDF Files** – Added PDF download Links
 * 🔍 **Side-by-Side Translation View** – Compare meanings across multiple languages
 * 📖 **Smart Reading Tools** – Navigate by Surah, Juz, Page, Manzil, or Sajda
 * 🔖 **Bookmarks & Resume Reading**

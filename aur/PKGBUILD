@@ -1,0 +1,56 @@
+# Maintainer: Jinosh Nadar <jinosh05@gmail.com>
+#
+# Binary package: installs the prebuilt Linux AppImage published on GitHub.
+# No application source code is downloaded, built, or redistributed by this
+# package. Upstream only publishes release binaries.
+
+pkgname=al-quran-multilingual-bin
+pkgver=1.5.0
+pkgrel=1
+pkgdesc='Free multilingual Quran app with 470+ editions and 90+ languages'
+arch=('x86_64')
+url='https://alquranjino.online'
+license=('MIT')
+depends=('gtk3' 'gst-plugins-base' 'gst-plugins-good' 'xdg-utils')
+optdepends=(
+  'gst-libav: additional audio codecs'
+  'gst-plugins-bad: additional audio codecs'
+)
+provides=('al-quran-multilingual')
+conflicts=('al-quran-multilingual')
+options=('!strip' '!debug')
+
+source=(
+  "${pkgname}-${pkgver}.AppImage::https://github.com/jinosh05/Al-Quran-Multilingual-Desktop/releases/download/${pkgver}/Al_Quran_Multilingual-x86_64.AppImage"
+  "al-quran-multilingual.desktop"
+)
+sha256sums=(
+  '15b6c7575a8abf8cb2d3a30d40a9fe0da3a160edd4b993f5827ae96df761fec7'
+  '796449493b7b216263c5144d34be02400ee820b0da61b24bd0acdca58bb4cf50'
+)
+
+prepare() {
+  chmod +x "${srcdir}/${pkgname}-${pkgver}.AppImage"
+  "${srcdir}/${pkgname}-${pkgver}.AppImage" --appimage-extract >/dev/null
+}
+
+package() {
+  install -d "${pkgdir}/opt/${pkgname}"
+  cp -a "${srcdir}/squashfs-root/usr" "${pkgdir}/opt/${pkgname}/"
+
+  # The AppImage runtime may extract directories as 0700; make the installed
+  # application readable and executable by every local user.
+  chmod -R u+rwX,go+rX "${pkgdir}/opt/${pkgname}"
+
+  install -d "${pkgdir}/usr/bin"
+  cat > "${pkgdir}/usr/bin/al-quran-multilingual" <<'EOF'
+#!/bin/sh
+exec /opt/al-quran-multilingual-bin/usr/bin/quran "$@"
+EOF
+  chmod 755 "${pkgdir}/usr/bin/al-quran-multilingual"
+
+  install -Dm644 "${srcdir}/al-quran-multilingual.desktop" \
+    "${pkgdir}/usr/share/applications/al-quran-multilingual.desktop"
+  install -Dm644 "${srcdir}/squashfs-root/al_quran_multilingual.png" \
+    "${pkgdir}/usr/share/icons/hicolor/512x512/apps/al-quran-multilingual.png"
+}

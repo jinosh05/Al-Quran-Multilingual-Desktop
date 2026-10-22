@@ -76,11 +76,27 @@ Make the Holy Quran universally accessible — breaking language barriers throug
 
 ## 🐧 Linux
 
-* **AppImage:** `./linux/Al-Quran-Multilingual-x86_64.AppImage`
+### Arch Linux (AUR)
 
 ```bash
-chmod +x Al-Quran-Multilingual-x86_64.AppImage
-./Al-Quran-Multilingual-x86_64.AppImage
+yay -S al-quran-multilingual-bin
+# or
+paru -S al-quran-multilingual-bin
+```
+
+AUR package: [al-quran-multilingual-bin](https://aur.archlinux.org/packages/al-quran-multilingual-bin)
+
+The AUR package is a **binary package**: it installs the prebuilt release and
+does not download or compile the Flutter source code.
+
+### AppImage (all distributions)
+
+Download `Al_Quran_Multilingual-x86_64.AppImage` from
+[GitHub Releases](https://github.com/jinosh05/Al-Quran-Multilingual-Desktop/releases/latest).
+
+```bash
+chmod +x Al_Quran_Multilingual-x86_64.AppImage
+./Al_Quran_Multilingual-x86_64.AppImage
 ```
 
 ## 🪟 Windows
@@ -188,7 +204,7 @@ Light mode, dark mode, system theme, fonts, layout controls.
 | 🍎 iOS     | ✅      | ✅                          | App Store                                                |
 | 🖥 Windows | ✅      | ✅                          | GitHub Releases                                          |
 | 🍏 macOS   | ✅      | ✅                          | App Store                                                |
-| 🐧 Linux   | ✅      | ✅                          | GitHub Releases                                          |
+| 🐧 Linux   | ✅      | ✅                          | [AUR](https://aur.archlinux.org/packages/al-quran-multilingual-bin) • [AppImage](https://github.com/jinosh05/Al-Quran-Multilingual-Desktop/releases/latest) |
 
 ---
 

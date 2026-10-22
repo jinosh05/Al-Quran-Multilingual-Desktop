@@ -1,0 +1,76 @@
+name: Publish Linux release
+
+on:
+  push:
+    tags:
+      - '[0-9]*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate release version and checksum
+        run: |
+          set -euo pipefail
+          pkgver="$(sed -n 's/^pkgver=//p' aur/PKGBUILD)"
+          if [ "$pkgver" != "${GITHUB_REF_NAME}" ]; then
+            echo "Tag ${GITHUB_REF_NAME} does not match pkgver ${pkgver} in aur/PKGBUILD" >&2
+            exit 1
+          fi
+          (cd linux && sha256sum -c SHA256SUMS)
+
+      - name: Smoke-test AppImage
+        run: |
+          set -euo pipefail
+          chmod +x linux/Al_Quran_Multilingual-x86_64.AppImage
+          ./linux/Al_Quran_Multilingual-x86_64.AppImage --appimage-extract >/dev/null
+          test -x squashfs-root/AppRun
+          test -x squashfs-root/usr/bin/quran
+          rm -rf squashfs-root
+
+      - name: Publish GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Al Quran Multilingual ${{ github.ref_name }}
+          body: |
+            ## Al Quran Multilingual ${{ github.ref_name }} — Linux
+
+            Prebuilt Linux AppImage for x86_64.
+
+            ### Download
+
+            - `Al_Quran_Multilingual-x86_64.AppImage`
+            - `SHA256SUMS`
+
+            ### Run the AppImage
+
+            ```bash
+            chmod +x Al_Quran_Multilingual-x86_64.AppImage
+            ./Al_Quran_Multilingual-x86_64.AppImage
+            ```
+
+            ### Verify the download
+
+            ```bash
+            sha256sum -c SHA256SUMS
+            ```
+
+            ### Arch Linux (AUR)
+
+            ```bash
+            yay -S al-quran-multilingual-bin
+            ```
+
+            The AUR package installs this same prebuilt release; no application
+            source code is downloaded or compiled.
+          files: |
+            linux/Al_Quran_Multilingual-x86_64.AppImage
+            linux/SHA256SUMS
+          fail_on_unmatched_files: true
+          make_latest: true

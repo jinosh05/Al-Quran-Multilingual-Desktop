@@ -1,0 +1,23 @@
+pkgbase = al-quran-multilingual-bin
+	pkgdesc = Free multilingual Quran app with 470+ editions and 90+ languages
+	pkgver = 1.5.0
+	pkgrel = 1
+	url = https://alquranjino.online
+	arch = x86_64
+	license = MIT
+	depends = gtk3
+	depends = gst-plugins-base
+	depends = gst-plugins-good
+	depends = xdg-utils
+	optdepends = gst-libav: additional audio codecs
+	optdepends = gst-plugins-bad: additional audio codecs
+	provides = al-quran-multilingual
+	conflicts = al-quran-multilingual
+	options = !strip
+	options = !debug
+	source = al-quran-multilingual-bin-1.5.0.AppImage::https://github.com/jinosh05/Al-Quran-Multilingual-Desktop/releases/download/1.5.0/Al_Quran_Multilingual-x86_64.AppImage
+	source = al-quran-multilingual.desktop
+	sha256sums = 15b6c7575a8abf8cb2d3a30d40a9fe0da3a160edd4b993f5827ae96df761fec7
+	sha256sums = 796449493b7b216263c5144d34be02400ee820b0da61b24bd0acdca58bb4cf50
+
+pkgname = al-quran-multilingual-bin

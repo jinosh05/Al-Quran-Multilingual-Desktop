@@ -18,6 +18,6 @@ pkgbase = al-quran-multilingual-bin
 	source = al-quran-multilingual-bin-1.5.0.AppImage::https://github.com/jinosh05/Al-Quran-Multilingual-Desktop/releases/download/1.5.0/Al_Quran_Multilingual-x86_64.AppImage
 	source = al-quran-multilingual.desktop
 	sha256sums = 15b6c7575a8abf8cb2d3a30d40a9fe0da3a160edd4b993f5827ae96df761fec7
-	sha256sums = 796449493b7b216263c5144d34be02400ee820b0da61b24bd0acdca58bb4cf50
+	sha256sums = 7ff8e4ddc81017453f06df7a61fe922c22c3aa0b8c54b43d2c306f0fb3614079
 
 pkgname = al-quran-multilingual-bin

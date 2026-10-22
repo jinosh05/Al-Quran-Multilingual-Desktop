@@ -35,7 +35,7 @@ desktop_sha256="$(sha256sum "aur/al-quran-multilingual.desktop" | awk '{print $1
 
 # Update pkgver and both checksums in place.
 sed -i "s/^pkgver=.*/pkgver=${version}/" "$pkgbuild"
-perl -0pi -e "s/(sha256sums=\(\n\s*')[0-9a-f]{64}(\n\s*')[0-9a-f]{64}/\${1}${sha256}\${2}${desktop_sha256}/" "$pkgbuild"
+perl -0pi -e "s{(sha256sums=\(\n\s*')[0-9a-f]{64}('\n\s*')[0-9a-f]{64}(')}{\${1}${sha256}\${2}${desktop_sha256}\${3}}" "$pkgbuild"
 
 # Regenerate .SRCINFO from the PKGBUILD.
 (

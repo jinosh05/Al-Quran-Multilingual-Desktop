@@ -9,4 +9,4 @@ Terminal=false
 Categories=Education;
 Keywords=Quran;Islam;Multilingual;Translation;Tafsir;
 StartupNotify=true
-StartupWMClass=quran
+StartupWMClass=jino.quran.quran

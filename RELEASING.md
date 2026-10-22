@@ -50,17 +50,22 @@ of this repository and is never included in the release assets.
    smoke-tests the AppImage, and publishes the GitHub Release with the
    AppImage and `SHA256SUMS` asset.
 
-5. Push the updated AUR package:
+5. Publish to the AUR. One-time prerequisite: create an AUR account and add
+   this machine's public key under **My Account → SSH Public Key**:
 
    ```bash
-   cd /path/to/al-quran-multilingual-bin
-   cp /path/to/Al-Quran-Multilingual-Desktop/aur/PKGBUILD .
-   cp /path/to/Al-Quran-Multilingual-Desktop/aur/.SRCINFO .
-   cp /path/to/Al-Quran-Multilingual-Desktop/aur/al-quran-multilingual.desktop .
-   git add PKGBUILD .SRCINFO al-quran-multilingual.desktop
-   git commit -m "upgpkg: al-quran-multilingual-bin 1.5.0-1"
-   git push
+   cat ~/.ssh/id_ed25519.pub
    ```
+
+   Then run:
+
+   ```bash
+   ./scripts/push-aur.sh
+   ```
+
+   The script clones the AUR repository, copies `PKGBUILD`, `.SRCINFO`, and the
+   desktop entry, regenerates `.SRCINFO`, commits, and pushes. It refuses to run
+   until `ssh -T aur@aur.archlinux.org` authenticates.
 
 ## Why the AUR package is `-bin`
 

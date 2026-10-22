@@ -19,6 +19,18 @@ paru -S al-quran-multilingual-bin
 
 ## Publish / update the package
 
+The easiest path is the helper script from the release repository:
+
+```bash
+./scripts/push-aur.sh
+```
+
+It clones the AUR repository, copies `PKGBUILD`, `.SRCINFO`, and the desktop
+entry, regenerates `.SRCINFO`, commits, and pushes.
+
+<details>
+<summary>Manual push</summary>
+
 The AUR repository is separate from this GitHub repository and is pushed over
 SSH:
 
@@ -32,6 +44,8 @@ git add PKGBUILD .SRCINFO al-quran-multilingual.desktop
 git commit -m "upgpkg: al-quran-multilingual-bin 1.5.0-1"
 git push
 ```
+
+</details>
 
 `aur.archlinux.org` authenticates with an SSH key, not a password. The public
 key must be registered under **My Account** on <https://aur.archlinux.org>:

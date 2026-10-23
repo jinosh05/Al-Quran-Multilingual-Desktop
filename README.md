@@ -74,43 +74,80 @@ Make the Holy Quran universally accessible — breaking language barriers throug
 
 # 📥 Download Al Quran Multilingual
 
+> **macOS:** the [App Store version](https://apps.apple.com/app/al-quran-multilingual/id6738510896)
+> is recommended. Direct DMG builds are also available below.
+>
+> All desktop downloads are compiled, obfuscated builds. The Flutter source is
+> not distributed. Verify downloads with `SHA256SUMS.txt` from the
+> [latest release](https://github.com/jinosh05/Al-Quran-Multilingual-Desktop/releases/latest).
+
 ## 🐧 Linux
 
-### Arch Linux (AUR)
-
-```bash
-yay -S al-quran-multilingual-bin
-# or
-paru -S al-quran-multilingual-bin
-```
-
-AUR package: [al-quran-multilingual-bin](https://aur.archlinux.org/packages/al-quran-multilingual-bin)
-
-The AUR package is a **binary package**: it installs the prebuilt release and
-does not download or compile the Flutter source code.
-
-### AppImage (all distributions)
-
-Download `Al_Quran_Multilingual-x86_64.AppImage` from
+Download `Al-Quran-Multilingual-linux-x64.tar.gz` from
 [GitHub Releases](https://github.com/jinosh05/Al-Quran-Multilingual-Desktop/releases/latest).
 
 ```bash
-chmod +x Al_Quran_Multilingual-x86_64.AppImage
-./Al_Quran_Multilingual-x86_64.AppImage
+tar -xzf Al-Quran-Multilingual-linux-x64.tar.gz
+cd Al-Quran-Multilingual
+./quran
 ```
+
+Requirements: x86_64 Linux with **GTK 3** and **GStreamer 1.0** (base and good
+plugins).
+
+```bash
+# Ubuntu / Debian
+sudo apt install libgtk-3-0 libgstreamer1.0-0 \
+  gstreamer1.0-plugins-base gstreamer1.0-plugins-good
+
+# Fedora
+sudo dnf install gtk3 gstreamer1 gstreamer1-plugins-base gstreamer1-plugins-good
+
+# Arch Linux
+sudo pacman -S gtk3 gstreamer gst-plugins-base gst-plugins-good
+```
+
+For microphone recording, install the PulseAudio utilities (`parec`/`pactl`)
+and run PulseAudio or PipeWire-Pulse.
 
 ## 🪟 Windows
 
-* **Installer:** `./windows/Al-Quran-Multilingual-Setup.exe`
+Download `Al-Quran-Multilingual-windows-x64.zip`, extract it, and run
+`al_quran_multilingual.exe`.
+
+* **Portable:** no installer or administrator rights required.
+* **Requirements:** Windows 10 or newer (64-bit).
 
 ## 🍏 macOS
 
-* **App Store:** [https://apps.apple.com/app/al-quran-multilingual/id6738510896](https://apps.apple.com/app/al-quran-multilingual/id6738510896)
+* **App Store (recommended):** [https://apps.apple.com/app/al-quran-multilingual/id6738510896](https://apps.apple.com/app/al-quran-multilingual/id6738510896)
+* **Direct download — Apple Silicon:** [Al-Quran-Multilingual-macos-arm64.dmg](https://github.com/jinosh05/Al-Quran-Multilingual-Desktop/releases/latest/download/Al-Quran-Multilingual-macos-arm64.dmg)
+* **Direct download — Intel:** [Al-Quran-Multilingual-macos-x64.dmg](https://github.com/jinosh05/Al-Quran-Multilingual-Desktop/releases/latest/download/Al-Quran-Multilingual-macos-x64.dmg)
+
+Direct builds require **macOS 12.4 or newer** and are ad-hoc signed, not
+notarized. On first launch, right-click the app and choose **Open** if
+Gatekeeper blocks it.
 
 ## 📱 Mobile
 
 * **Android:** [https://play.google.com/store/apps/details?id=jino.quran.app](https://play.google.com/store/apps/details?id=jino.quran.app)
 * **iOS/macOS:** [https://apps.apple.com/app/al-quran-multilingual/id6738510896](https://apps.apple.com/app/al-quran-multilingual/id6738510896)
+
+### 🔐 Verify your download
+
+Download `SHA256SUMS.txt` from the latest release, place it next to the
+downloaded file, and run:
+
+```bash
+sha256sum -c SHA256SUMS.txt --ignore-missing
+```
+
+On macOS, use `shasum -a 256 <file>` and compare the result with the matching
+line in `SHA256SUMS.txt`. On Windows PowerShell:
+
+```powershell
+Get-FileHash .\Al-Quran-Multilingual-windows-x64.zip -Algorithm SHA256
+```
 
 ---
 
@@ -162,11 +199,11 @@ Compare translations side-by-side — up to **all 90+ languages**.
 
 ### 🔹 Combined PDF (Two languages side-by-side)
 
-![Combined](./screenshots/Al%20Quran%20-%20%20Combined%20PDF%20page.png)
+![Combined](./screenshots/Al%20Quran%20-%20Combined%20PDF%20page.png)
 
 ### 🔹 Individual PDF Download
 
-![Individual PDF](./screenshots/Al%20Quran%20-%20%20Download%20Individual%20PDF.png)
+![Individual PDF](./screenshots/Al%20Quran%20-%20Download%20Individual%20PDF.png)
 
 ---
 
@@ -202,9 +239,9 @@ Light mode, dark mode, system theme, fonts, layout controls.
 | 🌐 Web     | ✅      | ❌                          | [https://alquranjino.online](https://alquranjino.online) |
 | 📱 Android | ✅      | ✅                          | Google Play                                              |
 | 🍎 iOS     | ✅      | ✅                          | App Store                                                |
-| 🖥 Windows | ✅      | ✅                          | GitHub Releases                                          |
-| 🍏 macOS   | ✅      | ✅                          | App Store                                                |
-| 🐧 Linux   | ✅      | ✅                          | [AUR](https://aur.archlinux.org/packages/al-quran-multilingual-bin) • [AppImage](https://github.com/jinosh05/Al-Quran-Multilingual-Desktop/releases/latest) |
+| 🖥 Windows | ✅      | ✅                          | [GitHub Releases](https://github.com/jinosh05/Al-Quran-Multilingual-Desktop/releases/latest) |
+| 🍏 macOS   | ✅      | ✅                          | [App Store](https://apps.apple.com/app/al-quran-multilingual/id6738510896) • [DMG](https://github.com/jinosh05/Al-Quran-Multilingual-Desktop/releases/latest) |
+| 🐧 Linux   | ✅      | ✅                          | [GitHub Releases](https://github.com/jinosh05/Al-Quran-Multilingual-Desktop/releases/latest) |
 
 ---
 
@@ -361,8 +398,8 @@ This app exists to make reading and understanding the Quran as easy and accessib
 | Individual Chapter      | ![](./screenshots/Al%20Quran%20-%20%20Inidvidual%20Quran%20Chapters.png)   |
 | Verse Reader            | ![](./screenshots/Al%20Quran%20-%20Read%20Individual%20Quran%20versus.png) |
 | Multilingual View       | ![](./screenshots/Al%20Quran%20-%20%20Multi%20Lingual%20versus%20page.png) |
-| Combined PDF            | ![](./screenshots/Al%20Quran%20-%20%20Combined%20PDF%20page.png)           |
-| Download Individual PDF | ![](./screenshots/Al%20Quran%20-%20%20Download%20Individual%20PDF.png)     |
+| Combined PDF            | ![](./screenshots/Al%20Quran%20-%20Combined%20PDF%20page.png)           |
+| Download Individual PDF | ![](./screenshots/Al%20Quran%20-%20Download%20Individual%20PDF.png)     |
 | Settings 1              | ![](./screenshots/Al%20Quran%20-%20%20Settings%201.png)                    |
 | Settings 2              | ![](./screenshots/Al%20Quran%20-%20%20Settings%202.png)                    |
 
